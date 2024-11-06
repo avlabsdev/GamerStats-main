@@ -1,0 +1,376 @@
+:root {
+	font-size: 16px;
+	--main-orange: #E48717;
+	--light-orange: #FC9519;
+	--off-orange: #FFD294;
+	--blue: #354ECC;
+	--light-blue: #4361FF;
+	--dark-blue-opacity: rgba(16, 13, 27, 0.75);;
+	--placeholder-gray: #888888;
+	--white: #eeeeee;
+	--body-bg-color: #D9D9D9;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	background-color: var(--body-bg-color);
+	border-bottom: 1px solid var(--main-orange);
+	border-top: 1px solid var(--main-orange);
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1136px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header {
+	border-bottom: 1px solid #E48717;
+	background: linear-gradient(90deg, #D9D9D9 50%, #E38817 50%);
+}
+
+header .container {
+	background-image: url("../img/banner-img.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+	min-height: 470px;
+}
+
+header h1 {
+	position: absolute;
+	right: 0;
+	top: 14rem;
+	font-style: italic;
+	display: flex;
+	flex-direction: column;
+	color: var(--white);
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+header h1 span {
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 48px;
+	text-transform: uppercase;
+}
+p {
+	line-height: 1.5;
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 0;
+}
+
+.logo {
+	text-decoration: none;
+	color: #E48717;
+	border: 1px solid var(--main-orange);
+	padding: .5rem .75rem;
+	border-radius: .25rem;
+	color: #E48717;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.menu-icon {
+	color: var(--white);
+	border: 1px solid var(--white);
+	padding: .5rem .75rem;
+	border-radius: .25rem;
+}
+
+header form {
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+	max-width: 272px;
+	margin-top: 3.5rem;
+	font-size: 1rem;
+	font-family: Inter, sans-serif;
+	margin-bottom: 3rem;
+}
+
+input[type="username"], input[type="password"] {
+	padding: .75rem .5rem;
+	border-radius: .25rem;
+	border: 1px solid #E48717;
+	background: #FFF;
+}
+
+input::placeholder {
+	font-family: Inter, sans-serif;
+}
+
+button {
+	cursor: pointer;
+	padding: .75rem 1.25rem;
+	font-family: Inter, sans-serif;
+}
+
+header form button {
+	margin-right: auto;
+	margin-top: .25rem;
+	color: var(--white);
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	background-color: var(--main-orange);
+	border-radius: .25rem;
+	border: none;
+}
+
+header .form-group {
+	display: flex;
+}
+
+header .form-group:first-of-type {
+	flex-direction: column;
+	gap: .5rem;
+}
+
+header .form-group:last-of-type {
+	flex-direction: row;
+	align-items: center;
+}
+
+.blue-link {
+	color: var(--blue);
+	font-size: 14px;
+}
+
+.light-blue-link {
+	color: var(--light-blue);
+	font-size: 14px;
+}
+
+.orange-link {
+	color: var(--main-orange);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-decoration-line: underline;
+}
+
+header .orange-link i {
+	text-decoration: none;
+	margin-left: .5rem;
+}
+
+.game-of-month {
+	color: var(--white);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: absolute;
+	right:0;
+	bottom:0;
+	border-radius: 4px 4px 0px 0px;
+	background: rgba(16, 13, 27, 0.75);
+	padding: .5rem 1rem;
+}
+
+.game-of-month a {
+	color: var(--off-orange);
+	margin-left: .5rem;
+}
+
+.game-of-month i {
+	margin-left: .5rem;
+}
+
+main {}
+
+.game-grid {
+	padding: 4rem 0;
+	background: linear-gradient(180deg, #000 0%, #111 50%, #000 100%);
+}
+
+.game-grid .container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.sub-header {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1rem;
+}
+
+.grid-item {
+	aspect-ratio: 1 / 1;
+	background-color: #eee;
+	border-radius: .25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-item img {
+	max-width: 100%;
+	border-radius: .25rem;
+}
+
+.game-grid .heading-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--main-orange);
+	padding-bottom: .75rem;
+}
+
+.heading-wrap a {
+	color: var(--off-orange);
+	font-size: 14px;
+}
+
+.heading-wrap a i {
+	margin-left: .5rem;
+}
+
+.game-grid h2 {
+	color: var(--white);
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.game-grid h2 i {
+	margin-right: .5rem;
+	color: var(--main-orange);
+}
+
+.link-account-section .container {
+	min-height: 450px;
+}
+
+.link-account-section .container, .earn-points-section .container, .track-journey-section .container {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	padding: 4rem 0;
+}
+
+.link-account-section .container {
+	padding-top: 4rem;
+}
+
+.earn-points-section .container {
+	padding-top: 4.75rem;
+}
+
+.track-journey-section .container {
+	padding-top: 4.5rem;
+}
+
+.link-account-section h2, .earn-points-section h2, .track-journey-section h2 {
+	text-align: center;
+	font-size: 1.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #111;
+	text-align: left;
+	width: 560px;
+	margin: 0 auto;
+}
+
+.earn-points-section h2 {
+	color: var(--white);
+}
+
+.link-account-section i, .earn-points-section i, .track-journey-section i {
+	margin-right: 1rem;
+	color: var(--main-orange);
+}
+
+.link-account-section p, .earn-points-section p, .track-journey-section p {
+	max-width: 550px;
+	margin: 0 auto;
+	color: #555;
+}
+
+.earn-points-section p {
+	color: #999;
+}
+
+.link-account-section .container img, .earn-points-section .container img, .track-journey-section .container img {
+	max-width: 100%;
+	position: absolute;
+}
+
+.link-account-section .container img {
+	width: 728px;
+	top: -1.25rem;
+	left: -33rem;
+}
+
+.earn-points-section .container img {
+	width: 771px;
+	right: -30rem;
+	top: -11rem;
+}
+
+.track-journey-section .container img {
+	width: 672px;
+	left: -30rem;
+	top: -12.25rem;
+}
+
+.earn-points-section .container {
+	min-height: 400px;
+}
+
+.earn-points-section {
+	background: linear-gradient(0deg, #000 0%, #111 50%, #000 100%);
+}
+
+.track-journey-section .container {
+	min-height: 400px;
+}
+
+.border-right {
+	border-right: 1px solid var(--main-orange);
+}
+
+.border-left {
+	border-left: 1px solid var(--main-orange);
+}
+
+footer {
+	padding: 4rem 0;
+	background: linear-gradient(0deg, #000 0%, #111 50%, #000 100%);
+	z-index: 0;
+    position: relative;
+}
+
+footer p {
+	text-align: center;
+	color: var(--white);
+}
+
+footer .light-blue-link {
+	font-size: 1rem;
+}
